@@ -96,4 +96,4 @@ Reducing the number of pizzas in each row messed up the spacing, so I created an
 
           changePizzaSizes(size);
   
-  In this snippet of code, I got rid of the bottleneck that was causing forced synchronous layout within the pizza slider, causing the pizza to change sizes in under 1ms
+In this snippet of code, I got rid of the bottleneck that was causing forced synchronous layout within the pizza slider, causing the pizza to change sizes in under 1ms.
