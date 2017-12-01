@@ -36,6 +36,7 @@ No optimizations were made to **pizza.html**. I successfully got the pizza page 
             // Used with permission
             items[i].style.transform = "translateX(" + (700 * phase) + "px)";
           }
+          
 In this snippet of code, I moved `var scrollTop` and `var items` higher up in the function
 
 I also added `items[i].style.transform` to make the pizza scrolling happen more quickly
@@ -94,3 +95,5 @@ Reducing the number of pizzas in each row messed up the spacing, so I created an
           }
 
           changePizzaSizes(size);
+  
+  In this snippet of code, I got rid of the bottleneck that was causing forced synchronous layout
