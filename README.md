@@ -29,8 +29,6 @@ No optimizations were made to **pizza.html**. I successfully got the pizza page 
           // Sets the new location of each moving pizza when the page is scrolled
           for (var i = 0; i < items.length; i++) {
             var phase = Math.sin((scrollTop / 1250) + (i % 5));
-            // The following line of code is from a user on Slack that I helped with this project
-            // Used with permission
             items[i].style.transform = "translateX(" + (700 * phase) + "px)";
           }
           
