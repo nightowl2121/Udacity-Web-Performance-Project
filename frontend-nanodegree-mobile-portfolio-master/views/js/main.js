@@ -525,7 +525,9 @@ function updatePositions() {
   // Sets the new location of each moving pizza when the page is scrolled
   for (var i = 0; i < items.length; i++) {
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
-    items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
+    // The following line of code is from a user on Slack that I helped with this project
+    // Used with permission
+    items[i].style.transform = "translateX(" + (700 * phase) + "px)";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -544,18 +546,15 @@ window.addEventListener('scroll', updatePositions);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {
-  var cols = 3;
+  var cols = 8;
   var s = 256;
-  // Horizontal space b/w moving pizzas
-  var l = 656;
   for (var i = 0; i < 30; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
     elem.src = "images/pizza.png";
-    elem.style.height = "50px";
-    elem.style.width = "36.65px";
-    // Determines the amount of space between each pizza
-    elem.basicLeft = (i % cols) * l;
+    elem.style.height = "100px";
+    elem.style.width = "73.333px";
+    elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
