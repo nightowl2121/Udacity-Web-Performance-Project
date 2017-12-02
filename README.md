@@ -36,30 +36,6 @@ In this snippet of code, I moved `var scrollTop` and `var items` higher up in th
 
 I also added `items[i].style.transform` to make the pizza scrolling happen more quickly
 
-2.
-        // Generates the sliding pizzas when the page loads.
-        document.addEventListener('DOMContentLoaded', function() {
-          var cols = 3;
-          var s = 256;
-          // Horizontal space b/w moving pizzas
-          var l = 556;
-          for (var i = 0; i < 30; i++) {
-            var elem = document.createElement('img');
-            elem.className = 'mover';
-            elem.src = "images/pizza.png";
-            elem.style.height = "50px";
-            elem.style.width = "36.65px";
-            // Determines the amount of space between each pizza
-            elem.basicLeft = (i % cols) * l;
-            elem.style.top = (Math.floor(i / cols) * s) + 'px';
-            document.querySelector("#movingPizzas1").appendChild(elem);
-          }
-          updatePositions();
-        });
-        
-In this snippet of code, I reduced the size of the moving pizzas by 50%. I also reduced the number of pizzas generated. I reduced the number of pizzas in `var cols` from 8 to 3 to lessen the number of pizzas in each row.
-
-Reducing the number of pizzas in each row messed up the spacing, so I created another variable called `l` and set it to my desired spacing between each pizza. I then added that variable to to `elem.basicLeft`
 
 3.
         // Iterates through pizza elements on the page and changes their widths
