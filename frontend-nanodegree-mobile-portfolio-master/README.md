@@ -1,5 +1,8 @@
 # Udacity Web Perforance Project
 
+## How to Access My Project
+Direct your browser to [my GitHub repository](https://github.com/nightowl2121/nightowl2121.github.io)
+
 ## How to Check the Portfolio's PageSpeed Insights Score
 Open **index.html** in my repository, copy the path, and paste it into [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/)
 
@@ -29,6 +32,8 @@ No optimizations were made to **pizza.html**. I successfully got the pizza page 
           // Sets the new location of each moving pizza when the page is scrolled
           for (var i = 0; i < items.length; i++) {
             var phase = Math.sin((scrollTop / 1250) + (i % 5));
+            // The following line of code is from a user on Slack that I helped with this project
+            // Used with permission
             items[i].style.transform = "translateX(" + (700 * phase) + "px)";
           }
           
@@ -36,7 +41,7 @@ In this snippet of code, I moved `var scrollTop` and `var items` higher up in th
 
 I also added `items[i].style.transform` to make the pizza scrolling happen more quickly
 
-3.
+2.
         // Iterates through pizza elements on the page and changes their widths
           // This chunk of code was taken from the course video called "Quiz: Stop FSL" 
           // ^^^(Section 5: Advanced Interactive Websites, Lesson 8: Styles and Layouts, Video 10) 

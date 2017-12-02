@@ -527,7 +527,7 @@ function updatePositions() {
     var phase = Math.sin((scrollTop / 1250) + (i % 5));
     // The following line of code is from a user on Slack that I helped with this project
     // Used with permission
-    items[i].style.transform = "translateX(" + (700 * phase) + "px)";
+    items[i].style.transform = "translateX(" + (100 * phase) + "px)";
   }
 
   // User Timing API to the rescue again. Seriously, it's worth learning.
@@ -554,7 +554,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.src = "images/pizza.png";
     elem.style.height = "100px";
     elem.style.width = "73.333px";
-    elem.basicLeft = (i % cols) * s;
+    elem.style.left = (i % cols) * s + 'px';
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
     document.querySelector("#movingPizzas1").appendChild(elem);
   }
